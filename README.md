@@ -1,9 +1,7 @@
 # TraceRoute
-
 .Net Core application to get cheapest route between two places
 
 ## Before you begin ##
-
 In order to build and test the application, you need to install .Net Core SDK for your OS: [Download .Net SDK](https://dotnet.microsoft.com/download "Download .Net SDK")
 
 ## How to run the Console Application##
@@ -27,7 +25,7 @@ The app will start listening on: http://localhost:5000
 ### How to get cheapest route ###
 Request Method [GET]:
 ```shell
-'http://localhost:5000/api/route?from=BRC&to=ORL'
+http://localhost:5000/api/route?from=BRC&to=ORL
 ```
 Response: **200 OK**:
 ```shell
@@ -39,7 +37,7 @@ Response: **200 OK**:
 ### How to save a new route ###
 Request Method [POST]:
 ```shell
-'http://localhost:5000/api/route'
+http://localhost:5000/api/route
 ```
 Body:
 ```shell
@@ -58,7 +56,6 @@ Response: **201 Created**:
 }
 ```
 ## Project Structure ##
-
 - Console -> The Console application
 - Core
 - - Routing.Business -> The business logic to get the cheapest route.
