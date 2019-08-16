@@ -71,5 +71,5 @@ Response: **201 Created**:
 
 ## Design Decisions ##
 - The application was design to be very simple, avoiding complex patterns and structures and make it working more organic/fluid as possible.
-- Dependency Injection was the choise because of unit testing mock and easy dependency management.
+- Dependency Injection was the choice because of unit testing mock and easy dependency management.
 - The validation of required/type fields are made by annotation on the requestsObjects, making it very easy to any developer to check and change.
