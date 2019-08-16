@@ -7,8 +7,8 @@ In order to build and test the application, you need to install .Net Core SDK fo
 ## How to run the Console Application##
 Open Linux/Windows Terminal, Go to **Console** folder and type the commands:
 ```shell
-dotnet build
-dotnet run -- path/to/your/file.csv
+$ dotnet build
+$ dotnet run -- path/to/your/file.csv
 ```
 Type your destinarion and get your cheapest route ex:
 ```shell
@@ -18,7 +18,7 @@ best route: GRU - BRC - SCL - ORL - CDG > $40
 ## How to run the Web Application##
 Go to **Routing.Api** folder and type the command:
 ```shell
-dotnet run
+$ dotnet run
 ```
 The app will start listening on: http://localhost:5000
 
@@ -28,10 +28,10 @@ Request Method [GET]:
 http://localhost:5000/api/route?from=BRC&to=ORL
 ```
 Response: **200 OK**:
-```shell
+```json
 {
-		"route":"BRC - SCL - ORL",
-		"price":25.0
+   "route":"BRC - SCL - ORL",
+   "price":25.0
 }
 ```
 ### How to save a new route ###
@@ -40,19 +40,19 @@ Request Method [POST]:
 http://localhost:5000/api/route
 ```
 Body:
-```shell
+```json
 {
-  "From": "XPT",
-  "To": "ATZ",
-  "Cost": 12
+   "From": "XPT",
+   "To": "ATZ",
+   "Cost": 12
 }
 ```
 Response: **201 Created**:
-```shell
+```json
 {
-  "From": "XPT",
-  "To": "ATZ",
-  "Cost": 12
+   "From": "XPT",
+   "To": "ATZ",
+   "Cost": 12
 }
 ```
 ## Project Structure ##
