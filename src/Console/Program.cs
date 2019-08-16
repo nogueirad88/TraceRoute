@@ -17,15 +17,13 @@ namespace Routing.TraceRoute
 
         public static void Main(string[] args)
         {
-            //if (!File.Exists(args[0]))
-            //{
-            //    Console.WriteLine("CSV File Not Found");
-            //    return;
-            //}
+            if (!File.Exists(args[0]))
+            {
+                Console.WriteLine("CSV File Not Found");
+                return;
+            }
 
-            //_filePath = args[0];
-
-            _filePath = @"C:\Users\Douglas\Desktop\Routing\src\Console\file.csv";
+            _filePath = args[0];
 
             var serviceProvider = SetupDependencyInjection();
 
