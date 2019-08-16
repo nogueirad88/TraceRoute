@@ -59,16 +59,15 @@ Response: **201 Created**:
 ```
 ## Project Structure ##
 
-+-- **Console**
-+-- **Core**
-¦   +-- Routing.Business -> The business logic to get the cheapest route.
-¦   +-- Routing.Model -> Classes to represent route and itinerary objects.
-¦   +-- Routing.Service -> Make the conversation possible between Business and Repository.
-¦   +-- Routing.Repository -> Make access to resources direcly.
-+-- **Routing.Api**
-¦   +-- Controllers ->Represent the  api endpoints exposed.
-¦   +-- RequestObjects -> Represent complex request body objects when necessary.
-¦   +-- ResponseObjects -> Represent complex response body objects when necessary.
-+- **Tests**
-¦   +-- Routing.UnitTests ->Some tests to help debugging.
-+-- 
+- Console -> The Console application
+- Core
+- - Routing.Business -> The business logic to get the cheapest route.
+- - Routing.Model -> Classes to represent route and itinerary objects.
+- - Routing.Service -> Make the conversation possible between Business and Repository.
+- - Routing.Repository -> Make access to resources direcly.
+- Routing.Api
+- - Controllers ->Represent the  api endpoints exposed.
+- - RequestObjects -> Represent complex request body objects when necessary.
+- - ResponseObjects -> Represent complex response body objects when necessary.
+- Tests
+- - Routing.UnitTests ->Some tests to help debugging.
