@@ -19,16 +19,18 @@ namespace Routing.Service
         {
             var csv = _fileRepository.ReadCsv();
 
-            return ParseCsvToRouteDictionary(csv);
-        }
-
-        private Dictionary<string, List<Route>> ParseCsvToRouteDictionary(IEnumerable<string> csv)
-        {
             var routes = csv.Select(ParseRoute).ToList();
 
             return routes.Select(p => p.From)
-                         .Distinct()
-                         .ToDictionary(route => route, route => routes.FindAll(p => p.From == route));
+                .Distinct()
+                .ToDictionary(route => route, route => routes.FindAll(p => p.From == route));
+        }
+
+        public Route Save(Route route)
+        {
+            var savedLine = _fileRepository.SaveLine(route.ToString());
+
+            return ParseRoute(savedLine);
         }
 
         private static Route ParseRoute(string line)

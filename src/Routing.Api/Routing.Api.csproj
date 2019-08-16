@@ -5,11 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
+    <None Include="wwwroot\Resources\file.csv" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Routing.Business\Routing.Business.csproj" />
+    <ProjectReference Include="..\Core\Routing.Model\Routing.Model.csproj" />
+    <ProjectReference Include="..\Core\Routing.Repository\Routing.Repository.csproj" />
+    <ProjectReference Include="..\Core\Routing.Service\Routing.Service.csproj" />
   </ItemGroup>
 
 </Project>

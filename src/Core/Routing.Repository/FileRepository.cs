@@ -19,7 +19,7 @@ namespace Routing.Repository
         {
             var lines = new List<string>();
 
-            var fs = new FileStream(_filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            var fs = new FileStream(_filePath, FileMode.Open, FileAccess.Read);
 
             using (var sr = new StreamReader(fs))
             {
@@ -32,6 +32,17 @@ namespace Routing.Repository
             }
 
             return lines;
+        }
+
+        public string SaveLine(string line)
+        {
+            using (var sw = File.AppendText(_filePath))
+            {
+                sw.WriteLine();
+                sw.Write(line);
+            }
+
+            return line;
         }
     }
 }

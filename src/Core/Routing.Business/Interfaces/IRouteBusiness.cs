@@ -8,5 +8,6 @@ namespace Routing.Business.Interfaces
     public interface IRouteBusiness
     {
         Itinerary GetBestRoute(string fromRoute, string toRoute);
+        Route SaveRoute(Route route);
     }
 }

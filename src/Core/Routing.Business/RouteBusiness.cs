@@ -17,11 +17,18 @@ namespace Routing.Business
             _routeService = routeService;
         }
 
+        public Route SaveRoute(Route route)
+        {
+            return _routeService.Save(route);
+        }
         public Itinerary GetBestRoute(string fromRoute, string toRoute)
         {
             _routeDic = _routeService.GetRoutesFromFile();
 
             var itineraries = new List<Itinerary>();
+
+            if (!_routeDic.ContainsKey(fromRoute))
+                return null;
 
             foreach (var route in _routeDic[fromRoute])
             {

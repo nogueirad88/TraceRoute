@@ -44,5 +44,24 @@ namespace Routing.UnitTests
 
             Assert.Equal("GRU - BRC - SCL - ORL - CDG", cheapestRoute.ToString());
         }
+
+        [Fact]
+        public void Save_ShouldCall_RouteService_Save()
+        {
+            var routeServiceMock = new Mock<IRouteService>();
+
+            var routeToSave = new Route() {From = "SCL", To = "ORL", Cost = 20};
+
+            Route routePassed = null;
+
+            routeServiceMock.Setup(m => m.Save(It.IsAny<Route>())).Returns(routeToSave)
+                                                                               .Callback<Route>(p => routePassed = p);
+
+            var routeBusiness = new RouteBusiness(routeServiceMock.Object);
+
+            routeBusiness.SaveRoute(routeToSave);
+
+            Assert.Equal(routeToSave, routePassed);
+        }
     }
 }
