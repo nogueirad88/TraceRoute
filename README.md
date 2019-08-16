@@ -4,7 +4,7 @@
 ## Before you begin ##
 In order to build and test the application, you need to install .Net Core SDK for your OS: [Download .Net SDK](https://dotnet.microsoft.com/download "Download .Net SDK")
 
-## How to run the Console Application##
+## How to run the Console Application
 Open Linux/Windows Terminal, Go to **Console** folder and type the commands:
 ```shell
 $ dotnet build
@@ -15,7 +15,7 @@ Type your destinarion and get your cheapest route ex:
 please enter the route: GRU-CDG
 best route: GRU - BRC - SCL - ORL - CDG > $40
 ```
-## How to run the Web Application##
+## How to run the Web Application
 Go to **Routing.Api** folder and type the command:
 ```shell
 $ dotnet run
